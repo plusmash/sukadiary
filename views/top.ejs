@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <meta charset="utf-8">
+    <title>+SukaDiary</title>
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <!--
+    <% const test = "testword"; %>
+    <h1><%= test %></h1>
+    jsテスト　ちゃんと動くよ-->
+
+    <header>
+      <div class="header-logo">
+        <a href="/">+SukaDiary</a>
+      </div>
+      <div class="header-list">
+        <ul>
+          <li>
+            <a href="/intro">About</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/skirplus" target="_blank">Twitter</a>
+            <!-- target="_blank":新しいタブで開く -->
+          </li>
+          <li>
+            <a href="https://www.pixiv.net/users/18393576" target="_blank">Pixiv</a>
+          </li>
+          <li>
+            <a href="https://plusmash.tumblr.com/" target="_blank">Tumblr</a>
+          </li>
+        </ul>
+      </div><!-- header-list -->
+      <div class="clear"></div>
+    <div class="header-word">
+      <p>イラストやらを載せながら、webサイト制作を学ぶべく用意したホームページ</p>
+    </div>
+    </header>
+
+    <!-- イラスト配列 上から新規   {id: "", name: ""}, -->
+    <% const items = [
+      {id: "1wRI0A-q_53iqCB91jUXwmuLvhwmBv4LX", name: "200531"},
+      {id: "1qq_HPezFBm_Wn0YZbPl1Oc2KhrsKf2vr", name: "200527"},
+      {id: "1b8YPTZSEAfigjPjf9HhyxYc0qif9pCXc", name: "200525"},
+      {id: "1l0vlHrK23APXv3Z1oC_LiwDxNYG4-hLn", name: "200521"},
+      {id: "1mXbhzrPUZfsiIJgMPM2upatzT23Xgxx-", name: "200517"},
+      {id: "1-RhQUs2ThV0ETFVTp5OwQ88ILvye8zf3", name: "200514"},
+      {id: "1J0ZLPqQfS2qOxSlYmXD3DFtEr5RmPK_W", name: "200504"},
+      {id: "1JBPBLZ8fW9OseEL7TBoKsjcad3xnzHwe", name: "200503"},
+      {id: "1xSE8xBqtKPjBFwtFQYkYhyklxs237dsI", name: "200425"},
+      {id: "1O9PC5znXPjvCY6d66XDeNvCY0obhpvpA", name: "200418"},
+      {id: "1rzL-dygMwipYjS2S3_WHJRUEZfg3i2su", name: "200416"},
+      {id: "1nuXqfFXTw2x8JJyYCMgL2klbM5VzXmQY", name: "200405"},
+      {id: "1j4tlbM81mchG-ppY7cXjPfvPDkm-YEba", name: "200404"},
+      {id: "1xCm-DV4pFhKlCkotW2-gEolW8-iTYI64", name: "200325"},
+      {id: "1XZQfcZhAmLOAUXa-yUpBaADoWTvCQmqZ", name: "200321"},
+      {id: "1fdpX0OrCAu5EaUEFpsL2FJqKgPF876T9", name: "200315"},
+      {id: "1Y4g6LUlTMpUGBAFfGvHyVTdNa28cVkVP", name: "200309"},
+      {id: "1FcBDsjGFeaOPgalpVql9Hum_TW4jqvVf", name: "200303"},
+      {id: "1sZGxBfVzEPFZALI8EGzUwYpbHDMvCrRJ", name: "200227"},
+      {id: "1qiC96gj85K67lbpzCFVAL9lJSw1KS9N9", name: "200216"},
+      {id: "1djNnBcYF65NbgwbvOXXSqnB1BTomS5eI", name: "200210"},
+      {id: "1gPCzScLXKoZVJG52nonFv5Q9yV8L-TYM", name: "200204"},
+      {id: "1Mpw24Zqh4T1LBcg3U3iYKLUDRK5W8mgi", name: "200202"},
+      {id: "118U7tBEv8LorORLLK2COXptoaHMwf5dr", name: "200118"},
+    ]; %>
+
+      <div class="illust">
+        <h2>Artworks</h2>
+      <!--
+      <div class = testart>
+          <ul>
+            <li>
+              <img src = "http://drive.google.com/uc?export=view&id=1b8YPTZSEAfigjPjf9HhyxYc0qif9pCXc">
+              http://drive.google.com/uc?export=view&id={ID} ID部分を変更して読み込ませることができる
+            </li>
+            <li>
+              <img src = " http://drive.google.com/uc?export=view&id=1BQCTcjfcCRxDJPiIXcb8oKGKGX1qnWPs">
+              http://drive.google.com/uc?export=view&id={ID} ID部分を変更して読み込ませることができる
+            </li>
+          </ul>
+      </div>
+    -->
+
+        <div class="illust-list">
+          <div class = testart>
+            <ul>
+            <% items.forEach((item)=>{ %>
+              <li>
+                <img src="http://drive.google.com/uc?export=view&id=<%=item.id%>">
+              </li>
+            <% }); %>
+            </ul>
+          </div>
+        <!-- forEachで簡略化できるかも？ -->
+      </div> <!-- illust-list -->
+      <div class="clear"></div>
+      </div> <!-- second -->
+
+  </body>
+</html>
